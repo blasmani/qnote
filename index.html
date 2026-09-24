@@ -4,21 +4,78 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>QNote</title>
+<meta name="description" content="QNote: notas con renglones, Hoja Bond, notas de voz, recordatorios y copia de seguridad en tu Google Drive. App para Android.">
 <style>
-  :root { color-scheme: light dark; --fg:#0f1729; --muted:#65758b; --bg:#f9fafb; --accent:#007fff; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#f8fafc; --muted:#94a3b8; --bg:#080c16; --accent:#1a8cff; } }
+  :root { color-scheme: light dark; --fg:#0f1729; --muted:#65758b; --bg:#f9fafb; --card:#ffffff; --border:#e2e8f0; --accent:#007fff; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#f8fafc; --muted:#94a3b8; --bg:#080c16; --card:#101828; --border:#1e293b; --accent:#1a8cff; } }
   body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:640px; margin:0 auto; padding:48px 16px; text-align:center; }
-  img { width:128px; height:128px; border-radius:28px; } h1 { margin:16px 0 4px; } p { color:var(--muted); } a { color:var(--accent); }
+  main { max-width:720px; margin:0 auto; padding:40px 16px 56px; }
+  header { text-align:center; }
+  header img { width:128px; height:128px; border-radius:28px; }
+  h1 { margin:16px 0 4px; }
+  h2 { margin:32px 0 8px; font-size:1.2em; }
+  p, li { color:var(--muted); }
+  a { color:var(--accent); }
+  nav { text-align:center; margin:12px 0 0; }
+  nav a { margin:0 8px; }
+  section { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:8px 20px 16px; margin-top:24px; }
+  ul { padding-left:20px; }
+  footer { text-align:center; margin-top:32px; font-size:.9em; color:var(--muted); }
 </style>
 </head>
 <body>
 <main>
-  <img src="icon.png" alt="QNote">
-  <h1>QNote</h1>
-  <p>Notas con renglones, Hoja Bond, notas de voz, recordatorios y copia en tu Google Drive.</p>
-  <p><a href="privacidad.html">Política de privacidad / Privacy policy</a></p>
-  <p>Contacto: <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a></p>
+  <header>
+    <img src="icon.png" alt="Icono de QNote">
+    <h1>QNote</h1>
+    <p>App de notas para Android · Notes app for Android</p>
+    <nav><a href="#es">Español</a><a href="#en">English</a><a href="privacidad.html">Política de privacidad / Privacy policy</a></nav>
+  </header>
+
+  <section id="es" lang="es">
+    <h2>¿Qué es QNote?</h2>
+    <p>QNote es una libreta de notas sencilla y rápida para el día a día, hecha por Web Business Tools. Funciona sin crear cuenta: tus notas se guardan en tu teléfono.</p>
+    <ul>
+      <li><strong>Notas con renglones</strong> numerados, casillas para tachar lo que ya hiciste y 10 estilos de letra.</li>
+      <li><strong>Hoja Bond</strong>: texto con negrita, cursiva, subrayado, tamaños de letra y listas.</li>
+      <li><strong>Notas de voz</strong> dentro de tus notas de renglones.</li>
+      <li><strong>Recordatorios</strong> con fecha y hora, que abren la nota al tocar la notificación.</li>
+      <li><strong>Notas privadas con PIN</strong> de 6 dígitos.</li>
+      <li><strong>Copia de seguridad opcional en tu Google Drive</strong>, manual o automática.</li>
+    </ul>
+    <h2>¿Por qué QNote pide acceso a tu cuenta de Google?</h2>
+    <p>Solo si activas la copia de seguridad. QNote pide dos permisos:</p>
+    <ul>
+      <li><strong>Carpeta privada de la app en tu Google Drive</strong> (<code>drive.appdata</code>): para guardar y restaurar la copia de tus notas y audios. QNote no puede ver ni tocar ningún otro archivo de tu Drive.</li>
+      <li><strong>Tu dirección de correo</strong> (<code>email</code>): para mostrarte en la app qué cuenta guarda la copia.</li>
+    </ul>
+    <p>La copia va cifrada (HTTPS) directamente entre tu teléfono y Google. El desarrollador no recibe tus notas, no las vende ni las comparte, y no las usa para publicidad. Puedes cerrar sesión y borrar la copia cuando quieras: consulta la <a href="privacidad.html#borrar-datos">sección para eliminar tus datos</a>.</p>
+  </section>
+
+  <section id="en" lang="en">
+    <h2>What is QNote?</h2>
+    <p>QNote is a simple, fast notebook for everyday notes, made by Web Business Tools. No sign-up needed: your notes are stored on your phone.</p>
+    <ul>
+      <li><strong>Lined notes</strong> with numbered lines, checkboxes to cross things off and 10 font styles.</li>
+      <li><strong>Bond paper</strong>: rich text with bold, italics, underline, font sizes and lists.</li>
+      <li><strong>Voice notes</strong> inside your lined notes.</li>
+      <li><strong>Reminders</strong> with date and time; tapping the notification opens the note.</li>
+      <li><strong>Private notes</strong> protected with a 6-digit PIN.</li>
+      <li><strong>Optional backup to your Google Drive</strong>, manual or automatic.</li>
+    </ul>
+    <h2>Why does QNote ask for access to your Google Account?</h2>
+    <p>Only if you turn on backup. QNote requests two permissions:</p>
+    <ul>
+      <li><strong>The app's private folder in your Google Drive</strong> (<code>drive.appdata</code>): to save and restore the backup of your notes and recordings. QNote cannot see or change any other file in your Drive.</li>
+      <li><strong>Your email address</strong> (<code>email</code>): to show you in the app which account holds the backup.</li>
+    </ul>
+    <p>The backup travels encrypted (HTTPS) directly between your phone and Google. The developer does not receive your notes, does not sell or share them, and does not use them for advertising. You can sign out and delete the backup at any time: see the <a href="privacidad.html#delete-data">data deletion section</a>.</p>
+  </section>
+
+  <footer>
+    <p><a href="privacidad.html">Política de privacidad / Privacy policy</a> · Contacto / Contact: <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a></p>
+    <p>© 2026 Web Business Tools</p>
+  </footer>
 </main>
 </body>
 </html>
