@@ -1,0 +1,12 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.qnote.app",
+    "sha256_cert_fingerprints": [
+      "PLAY_SIGNING_SHA256",
+      "3C:BF:BE:02:F5:55:C5:6D:3B:0A:6F:4D:8D:F0:1C:7E:DA:68:AB:36:2C:E0:3C:69:E8:2D:F7:20:A7:D1:57:ED",
+      "AA:C8:F1:95:EE:99:F0:D9:8F:D0:99:1B:0E:5F:4D:15:1D:AC:A2:3A:60:A9:13:00:73:3E:62:B0:F8:6D:F0:D0"
+    ]
+  }
+}]

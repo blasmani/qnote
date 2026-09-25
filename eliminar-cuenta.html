@@ -1,0 +1,110 @@
+<!doctype html>
+<!--
+  BORRADOR (QNote 1.1.0, Notas compartidas). Se publica en
+  https://qnote.connectadigitalsolutions.com/eliminar-cuenta.html ANTES de subir la 1.1.0: es la URL
+  de eliminación de cuenta que se declara en Play Console › Seguridad de los datos, y la app la
+  enlaza desde Tu cuenta (SharedLimits.DELETE_ACCOUNT_URL). Las solicitudes se atienden con
+  firebase/admin/delete-user.mjs (docs/ARQUITECTURA.md › Notas compartidas).
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QNote — Eliminar tu cuenta y tus datos</title>
+<style>
+  :root { color-scheme: light dark; --fg:#0f1729; --muted:#65758b; --bg:#f9fafb; --card:#fff; --accent:#007fff; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#f8fafc; --muted:#94a3b8; --bg:#080c16; --card:#0b111e; --accent:#1a8cff; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:16px 0; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  h1 { font-size:28px; margin:8px 0 4px; } h2 { font-size:19px; margin:0 0 8px; }
+  p, li { color:var(--fg); } .muted { color:var(--muted); } a { color:var(--accent); }
+  nav a { margin-right:12px; }
+</style>
+</head>
+<body>
+<main>
+  <nav><a href="#es">Español</a><a href="#en">English</a></nav>
+
+  <section id="es" lang="es">
+    <h1>Eliminar tu cuenta de QNote y tus datos</h1>
+    <p class="muted">Última actualización: 24 de septiembre de 2026 · QNote, de Web Business Tools (blasmani) · Contacto: <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a></p>
+
+    <div class="card"><h2>Qué cuenta es</h2>
+      <p>QNote solo tiene cuenta para <strong>Notas compartidas</strong> (inicias sesión con Google en ☰ › Notas compartidas). Tus notas personales no están en ningún servidor: viven en tu teléfono y, si activaste la copia con QNote Premium, en la carpeta privada de la app en tu propio Google Drive.</p></div>
+
+    <div class="card"><h2>Desde la app (inmediato)</h2>
+      <ol>
+        <li>Abre QNote › menú ☰ › <strong>Notas compartidas</strong>.</li>
+        <li>Toca tu nombre al final de la lista para abrir <strong>Tu cuenta</strong>.</li>
+        <li>Toca <strong>Eliminar cuenta y datos</strong>, confirma y elige la misma cuenta de Google cuando te lo pida.</li>
+      </ol>
+      <p>Si al entrar te aparece «Antes de empezar» con Normas actualizadas, ahí mismo tienes <strong>Eliminar cuenta y datos</strong> sin necesidad de aceptarlas. Si iniciaste sesión y no aceptaste las Normas, «No, gracias» borra la cuenta al momento.</p></div>
+
+    <div class="card"><h2>Por correo (en un máximo de 30 días)</h2>
+      <p>Escribe a <a href="mailto:webbusinesstoolspro@gmail.com?subject=Eliminar%20cuenta%20QNote">webbusinesstoolspro@gmail.com</a> con el asunto <strong>«Eliminar cuenta QNote»</strong>, <strong>desde el correo de la cuenta de Google</strong> con la que usas Notas compartidas (así sabemos que eres tú). Te confirmamos por correo cuando esté hecho.</p>
+      <p>Por correo borramos además <strong>tus mensajes en notas de las que ya saliste o te quitaron</strong>, que la app no puede leer. Ojo: los mensajes solo guardan un identificador interno, no tu correo. Una vez eliminada la cuenta en la app ya no podemos saber cuáles eran tuyos, así que, si también quieres borrarlos, pídelo por correo <strong>antes</strong> de eliminar la cuenta en la app (o pide todo por correo).</p></div>
+
+    <div class="card"><h2>Qué se borra</h2>
+      <ul>
+        <li>Tu cuenta de Notas compartidas (Firebase Authentication: identificador, correo, nombre y enlace a la foto de Google) y tu perfil (nombre visible, aceptación de las Normas y tu lista de bloqueados).</li>
+        <li>Las notas compartidas que creaste, <strong>para todos sus miembros</strong>: lista, votaciones, chat e invitaciones.</li>
+        <li>En las notas de otros en las que sigues: tus mensajes, tus votos en votaciones abiertas, tus aportes y tus encargos; y sales de ellas.</li>
+      </ul></div>
+
+    <div class="card"><h2>Qué se conserva y cuánto tiempo</h2>
+      <ul>
+        <li>Los votos que diste en votaciones ya cerradas y las marcas de «hecho» quedan asociados a un identificador interno sin nombre (y los votos dejan de contarse).</li>
+        <li>Tus mensajes en notas de las que ya saliste, salvo que lo pidas por correo (arriba).</li>
+        <li>Si un creador te quitó y bloqueó o alguien te bloqueó, tu nombre visible sigue en su lista hasta que te desbloquee o elimine la nota o su cuenta.</li>
+        <li>Los reportes que hiciste o que se hicieron sobre tu contenido (con una copia del texto), hasta 1 año, por seguridad y cumplimiento legal.</li>
+        <li>Las copias de seguridad técnicas de Google (Firebase) se borran solas en un máximo de 180 días.</li>
+      </ul></div>
+
+    <div class="card"><h2>Qué no se toca</h2>
+      <p>Tus notas personales del teléfono y tu copia en Google Drive no están en ningún servidor de QNote: se borran desinstalando la app y, la copia, desde Google Drive (web) › Configuración › Gestionar aplicaciones › QNote › «Eliminar datos ocultos de la app» (ver <a href="privacidad.html#borrar-datos">Eliminar tus datos</a>). Tu suscripción a QNote Premium tampoco se cancela: hazlo en Google Play › Pagos y suscripciones.</p>
+      <p>Más detalle en la <a href="privacidad.html">Política de privacidad</a>.</p></div>
+  </section>
+
+  <section id="en" lang="en">
+    <h1>Delete your QNote account and data</h1>
+    <p class="muted">Last updated: September 24, 2026 · QNote, by Web Business Tools (blasmani) · Contact: <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a></p>
+
+    <div class="card"><h2>Which account</h2>
+      <p>QNote only has an account for <strong>Shared notes</strong> (you sign in with Google in ☰ › Shared notes). Your personal notes aren't on any server: they live on your phone and, if you turned on backup with QNote Premium, in the app's private folder in your own Google Drive.</p></div>
+
+    <div class="card"><h2>In the app (immediate)</h2>
+      <ol>
+        <li>Open QNote › menu ☰ › <strong>Shared notes</strong>.</li>
+        <li>Tap your name at the bottom of the list to open <strong>Your account</strong>.</li>
+        <li>Tap <strong>Delete account and data</strong>, confirm and choose the same Google account when asked.</li>
+      </ol>
+      <p>If you see “Before you start” with updated guidelines, <strong>Delete account and data</strong> is right there, without having to agree to them. If you signed in and didn't agree to the guidelines, “No thanks” deletes the account right away.</p></div>
+
+    <div class="card"><h2>By email (within 30 days)</h2>
+      <p>Email <a href="mailto:webbusinesstoolspro@gmail.com?subject=Eliminar%20cuenta%20QNote">webbusinesstoolspro@gmail.com</a> with the subject <strong>“Eliminar cuenta QNote”</strong>, <strong>from the address of the Google account</strong> you use with Shared notes (so we know it's you). We'll confirm by email when it's done.</p>
+      <p>By email we also delete <strong>your messages in notes you already left or were removed from</strong>, which the app can't read. Note: messages only store an internal identifier, not your email. Once the account is deleted in the app we can no longer tell which messages were yours, so if you want those deleted too, email us <strong>before</strong> deleting the account in the app (or request everything by email).</p></div>
+
+    <div class="card"><h2>What gets deleted</h2>
+      <ul>
+        <li>Your Shared notes account (Firebase Authentication: identifier, email, name and link to your Google photo) and your profile (display name, acceptance of the guidelines and your blocked list).</li>
+        <li>The shared notes you created, <strong>for all their members</strong>: list, polls, chat and invitations.</li>
+        <li>In other people's notes you're still in: your messages, your votes in open polls, your items and the items you're taking care of; and you leave them.</li>
+      </ul></div>
+
+    <div class="card"><h2>What is kept and for how long</h2>
+      <ul>
+        <li>Your votes in polls that were already closed and your “done” marks stay linked to an internal identifier with no name (and the votes no longer count).</li>
+        <li>Your messages in notes you already left, unless you ask by email (above).</li>
+        <li>If a note's creator removed and blocked you or someone blocked you, your display name stays in their list until they unblock you or delete the note or their account.</li>
+        <li>Reports you made or that were made about your content (with a copy of the text), for up to 1 year, for safety and legal compliance.</li>
+        <li>Google's technical backups (Firebase) are deleted automatically within 180 days.</li>
+      </ul></div>
+
+    <div class="card"><h2>What isn't affected</h2>
+      <p>Your personal notes on the phone and your Google Drive backup aren't on any QNote server: they're deleted by uninstalling the app and, the backup, in Google Drive (web) › Settings › Manage apps › QNote › “Delete hidden app data” (see <a href="privacidad.html#delete-data">Deleting your data</a>). Your QNote Premium subscription isn't canceled either: do that in Google Play › Payments &amp; subscriptions.</p>
+      <p>More details in the <a href="privacidad.html#en">Privacy Policy</a>.</p></div>
+  </section>
+</main>
+</body>
+</html>
