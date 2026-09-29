@@ -21,33 +21,34 @@
 
   <section id="es">
     <h1>Política de privacidad de QNote</h1>
-    <p class="muted">Última actualización: 24 de septiembre de 2026 · Desarrollador: Web Business Tools (blasmani) · Contacto: <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a></p>
+    <p class="muted">Última actualización: 28 de septiembre de 2026 · Desarrollador: Web Business Tools (blasmani) · Contacto: <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a></p>
 
     <div class="card"><h2>Resumen</h2>
-      <p>QNote es una app de notas gratuita con anuncios y con una suscripción opcional, <strong>QNote Premium</strong>, que quita los anuncios (ver <a href="#premium">Compras y QNote Premium</a>). No tiene analítica propia y no requiere registrarse. Tus notas, audios y recordatorios se guardan <strong>solo en tu teléfono</strong>, salvo que actives la copia de seguridad en <strong>tu propio Google Drive</strong>. Sin Premium, la pantalla principal y la de cada nota muestran un banner de <strong>Google AdMob</strong>, cuyo SDK envía a Google identificadores del dispositivo y datos técnicos (ver <a href="#anuncios">Anuncios</a>).</p></div>
+      <p>QNote es una app de notas gratuita con anuncios y con una suscripción opcional, <strong>QNote Premium</strong>, que quita los anuncios (ver <a href="#premium">Compras y QNote Premium</a>). No tiene analítica propia y no requiere registrarse. Tus notas, audios y recordatorios se guardan <strong>solo en tu teléfono</strong>, salvo que actives la copia de seguridad gratuita en <strong>tu propio Google Drive</strong>. Sin Premium, la pantalla principal y la de cada nota muestran un banner de <strong>Google AdMob</strong>, cuyo SDK envía a Google identificadores del dispositivo y datos técnicos (ver <a href="#anuncios">Anuncios</a>).</p></div>
 
     <div class="card"><h2>Datos que se guardan en el teléfono</h2>
       <ul>
-        <li>Notas (título, texto, ajustes de color y fuente), recordatorios y el PIN de las notas protegidas, que se guarda cifrado mediante hash (nunca en texto legible).</li>
+        <li>Notas (título, texto, ajustes de color y fuente), recordatorios y el PIN de las notas protegidas, que se guarda cifrado mediante hash (nunca en texto legible). Si proteges una nota con tu huella digital, la comprueba Android con su propio diálogo, que también acepta el bloqueo de pantalla del teléfono (PIN, patrón o contraseña): QNote solo sabe si la verificación salió bien y nunca recibe, guarda ni envía tu huella ni ese bloqueo.</li>
         <li>Grabaciones de notas de voz, en el almacenamiento interno privado de la app.</li>
         <li>Un registro de diagnóstico técnico sin contenido de tus notas, sin correos completos ni credenciales.</li>
         <li>Si compras QNote Premium, el estado de la suscripción (activa, pago pendiente, renovación automática y la fecha de la última comprobación), para no tener que preguntar a Google Play en cada arranque.</li>
       </ul>
       <p>Estos datos no se envían al desarrollador ni a terceros (tampoco a AdMob). Se borran al desinstalar la app.</p></div>
 
-    <div class="card"><h2>Copia de seguridad en Google Drive (opcional, con QNote Premium)</h2>
+    <div class="card"><h2>Copia de seguridad en Google Drive (opcional y gratis)</h2>
       <p>Si inicias sesión con Google en «Copia de seguridad», QNote pide permiso solo para:</p>
       <ul>
         <li><strong>drive.appdata</strong>: guardar un archivo de copia en la carpeta privada de la app dentro de tu Google Drive. QNote no puede ver ni modificar tus otros archivos de Drive.</li>
         <li><strong>email</strong>: mostrar con qué cuenta se hace la copia. El correo se guarda solo en tu teléfono.</li>
       </ul>
       <p>La copia (notas, recordatorios, hash del PIN y audios) viaja cifrada por HTTPS directamente entre tu teléfono y los servidores de Google. El desarrollador no tiene acceso a ella. El uso de la información recibida de las API de Google cumple la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de API de Google</a>, incluidos los requisitos de uso limitado.</p>
-      <p>Puedes desconectar la cuenta en la app (Copia de seguridad → Cerrar sesión) o, en cualquier momento y aunque ya no tengas Premium, quitarle el acceso a QNote en tu cuenta de Google (Gestionar tu cuenta de Google → Seguridad → Conexiones con terceros). La copia se borra desde Google Drive → Configuración → Gestionar aplicaciones → QNote → Eliminar datos ocultos de la app. Si Premium termina, la copia no se borra: sigue en tu Drive hasta que tú la elimines.</p></div>
+      <p>La copia es gratis para todos, con o sin QNote Premium. Puedes desconectar la cuenta en la app (Copia de seguridad → Cerrar sesión) o, en cualquier momento, quitarle el acceso a QNote en tu cuenta de Google (Gestionar tu cuenta de Google → Seguridad → Conexiones con terceros). Cerrar sesión no borra la copia: sigue en tu Drive hasta que tú la elimines desde Google Drive → Configuración → Gestionar aplicaciones → QNote → Eliminar datos ocultos de la app.</p></div>
 
     <div class="card"><h2>Permisos</h2>
       <ul>
         <li><strong>Micrófono</strong>: solo para grabar notas de voz cuando pulsas el botón de grabar.</li>
         <li><strong>Notificaciones y alarmas</strong>: para avisarte de tus recordatorios a la hora elegida.</li>
+        <li><strong>Biometría</strong> (<code>USE_BIOMETRIC</code> y <code>USE_FINGERPRINT</code>, este último para versiones antiguas de Android): para mostrar el diálogo de huella digital del sistema al proteger o abrir una nota; tu huella nunca sale de Android.</li>
         <li><strong>Internet</strong>: para la copia de seguridad en Google Drive y para cargar los anuncios.</li>
         <li><strong>Facturación de Google Play</strong> (<code>com.android.vending.BILLING</code>): para comprar QNote Premium y comprobar si la suscripción sigue activa.</li>
         <li><strong>ID de publicidad</strong> (<code>AD_ID</code>): lo usa el SDK de anuncios de Google (ver <a href="#anuncios">Anuncios</a>).</li>
@@ -67,7 +68,7 @@
       <p><strong>Con QNote Premium</strong> la app no muestra anuncios: no pide el consentimiento de anuncios ni inicia el SDK de Google AdMob, así que este no recopila los datos de arriba.</p></div>
 
     <div class="card" id="premium"><h2>Compras y QNote Premium</h2>
-      <p>QNote Premium es una suscripción opcional (mensual o anual) que se compra dentro de la app con <strong>Google Play</strong>. Google Play gestiona todo el pago: el desarrollador no recibe ni guarda los datos de tu tarjeta ni de tu medio de pago.</p>
+      <p>QNote Premium es una suscripción opcional (mensual o anual) que se compra dentro de la app con <strong>Google Play</strong> y solo quita los anuncios: el resto de la app, incluida la copia en Google Drive, funciona igual con o sin Premium. Google Play gestiona todo el pago: el desarrollador no recibe ni guarda los datos de tu tarjeta ni de tu medio de pago.</p>
       <ul>
         <li>Para saber si tienes Premium, la app pregunta a Google Play en tu teléfono (al abrirla y al volver a ella). Google Play responde con los datos de la compra (producto, estado, si se renueva automáticamente); la app los usa solo para activar o desactivar Premium y guarda el resultado en el teléfono, sin enviarlo al desarrollador ni a terceros.</li>
         <li>El estado de Premium no se copia al pasar tus datos a otro teléfono: el nuevo vuelve a preguntar a Google Play.</li>
@@ -78,7 +79,7 @@
     <div class="card" id="borrar-datos"><h2>Eliminar tus datos</h2>
       <ul>
         <li><strong>En el teléfono:</strong> borra las notas desde la app o desinstala QNote; todo lo guardado localmente se elimina.</li>
-        <li><strong>Copia en Google Drive:</strong> en QNote abre el menú (☰) → Copia de seguridad → Cerrar sesión (sin Premium, quita el acceso a QNote en tu cuenta de Google → Seguridad → Conexiones con terceros). Después, en Google Drive (web) abre Configuración → Gestionar aplicaciones → QNote → Opciones → «Eliminar datos ocultos de la app».</li>
+        <li><strong>Copia en Google Drive:</strong> en QNote abre el menú (☰) → Copia de seguridad → Cerrar sesión (o quita el acceso a QNote en tu cuenta de Google → Seguridad → Conexiones con terceros). Después, en Google Drive (web) abre Configuración → Gestionar aplicaciones → QNote → Opciones → «Eliminar datos ocultos de la app».</li>
         <li><strong>Suscripción:</strong> cancelarla no borra tus notas. Los datos de la compra los guarda Google Play (consulta la ayuda de Google Play).</li>
         <li><strong>Datos de anuncios:</strong> los trata Google (ver <a href="#anuncios">Anuncios</a>); puedes restablecer o eliminar el ID de publicidad en los ajustes de Android.</li>
         <li><strong>Por correo:</strong> si necesitas ayuda, escribe a <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a>. El desarrollador no guarda copias de tus datos en ningún servidor propio.</li>
@@ -93,33 +94,34 @@
 
   <section id="en">
     <h1>QNote Privacy Policy</h1>
-    <p class="muted">Last updated: September 24, 2026 · Developer: Web Business Tools (blasmani) · Contact: <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a></p>
+    <p class="muted">Last updated: September 28, 2026 · Developer: Web Business Tools (blasmani) · Contact: <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a></p>
 
     <div class="card"><h2>Summary</h2>
-      <p>QNote is a free, ad-supported notes app with an optional subscription, <strong>QNote Premium</strong>, that removes the ads (see <a href="#purchases">Purchases and QNote Premium</a>). It has no analytics of its own and requires no sign-up. Your notes, recordings and reminders are stored <strong>only on your phone</strong>, unless you turn on backup to <strong>your own Google Drive</strong>. Without Premium, the main screen and each note show a <strong>Google AdMob</strong> banner, whose SDK sends device identifiers and technical data to Google (see <a href="#ads">Ads</a>).</p></div>
+      <p>QNote is a free, ad-supported notes app with an optional subscription, <strong>QNote Premium</strong>, that removes the ads (see <a href="#purchases">Purchases and QNote Premium</a>). It has no analytics of its own and requires no sign-up. Your notes, recordings and reminders are stored <strong>only on your phone</strong>, unless you turn on the free backup to <strong>your own Google Drive</strong>. Without Premium, the main screen and each note show a <strong>Google AdMob</strong> banner, whose SDK sends device identifiers and technical data to Google (see <a href="#ads">Ads</a>).</p></div>
 
     <div class="card"><h2>Data stored on the device</h2>
       <ul>
-        <li>Notes (title, text, color and font settings), reminders and the PIN of protected notes, which is stored as a hash (never readable).</li>
+        <li>Notes (title, text, color and font settings), reminders and the PIN of protected notes, which is stored as a hash (never readable). If you protect a note with your fingerprint, Android checks it in its own dialog, which also accepts your phone's screen lock (PIN, pattern or password): QNote only learns whether the check succeeded and never receives, stores or sends your fingerprint or screen lock.</li>
         <li>Voice note recordings, in the app's private internal storage.</li>
         <li>A technical diagnostics log with no note content, full email addresses or credentials.</li>
         <li>If you buy QNote Premium, the subscription status (active, payment pending, auto-renewal and the date it was last checked), so the app doesn't have to ask Google Play on every launch.</li>
       </ul>
       <p>This data is not sent to the developer or third parties (including AdMob). It is deleted when you uninstall the app.</p></div>
 
-    <div class="card"><h2>Google Drive backup (optional, with QNote Premium)</h2>
+    <div class="card"><h2>Google Drive backup (optional and free)</h2>
       <p>If you sign in with Google under "Backup", QNote only requests:</p>
       <ul>
         <li><strong>drive.appdata</strong>: to store a backup file in the app's private folder in your Google Drive. QNote cannot see or change your other Drive files.</li>
         <li><strong>email</strong>: to show which account the backup uses. The email is stored only on your phone.</li>
       </ul>
       <p>The backup (notes, reminders, PIN hash and recordings) travels encrypted over HTTPS directly between your phone and Google's servers. The developer has no access to it. QNote's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
-      <p>You can disconnect the account in the app (Backup → Sign out) or, at any time and even if you no longer have Premium, remove QNote's access in your Google Account (Manage your Google Account → Security → Third-party connections). Delete the backup from Google Drive → Settings → Manage apps → QNote → Delete hidden app data. If Premium ends, the backup is not deleted: it stays in your Drive until you delete it.</p></div>
+      <p>Backup is free for everyone, with or without QNote Premium. You can disconnect the account in the app (Backup → Sign out) or, at any time, remove QNote's access in your Google Account (Manage your Google Account → Security → Third-party connections). Signing out doesn't delete the backup: it stays in your Drive until you delete it from Google Drive → Settings → Manage apps → QNote → Delete hidden app data.</p></div>
 
     <div class="card"><h2>Permissions</h2>
       <ul>
         <li><strong>Microphone</strong>: only to record voice notes when you tap the record button.</li>
         <li><strong>Notifications and alarms</strong>: to alert you about your reminders at the chosen time.</li>
+        <li><strong>Biometrics</strong> (<code>USE_BIOMETRIC</code> and <code>USE_FINGERPRINT</code>, the latter for older Android versions): to show the system fingerprint dialog when you protect or open a note; your fingerprint never leaves Android.</li>
         <li><strong>Internet</strong>: for Google Drive backup and to load ads.</li>
         <li><strong>Google Play billing</strong> (<code>com.android.vending.BILLING</code>): to buy QNote Premium and check whether the subscription is still active.</li>
         <li><strong>Advertising ID</strong> (<code>AD_ID</code>): used by Google's ads SDK (see <a href="#ads">Ads</a>).</li>
@@ -139,7 +141,7 @@
       <p><strong>With QNote Premium</strong> the app shows no ads: it doesn't ask for ad consent or start the Google AdMob SDK, so the SDK doesn't collect the data above.</p></div>
 
     <div class="card" id="purchases"><h2>Purchases and QNote Premium</h2>
-      <p>QNote Premium is an optional subscription (monthly or yearly) bought in the app through <strong>Google Play</strong>. Google Play handles the whole payment: the developer never receives or stores your card or payment details.</p>
+      <p>QNote Premium is an optional subscription (monthly or yearly) bought in the app through <strong>Google Play</strong>, and it only removes the ads: the rest of the app, including Google Drive backup, works the same with or without Premium. Google Play handles the whole payment: the developer never receives or stores your card or payment details.</p>
       <ul>
         <li>To know whether you have Premium, the app asks Google Play on your phone (when you open or return to it). Google Play answers with the purchase details (product, status, whether it auto-renews); the app uses them only to turn Premium on or off and stores the result on the phone, without sending it to the developer or third parties.</li>
         <li>The Premium status is not copied when you move your data to another phone: the new phone asks Google Play again.</li>
@@ -150,7 +152,7 @@
     <div class="card" id="delete-data"><h2>Deleting your data</h2>
       <ul>
         <li><strong>On the phone:</strong> delete notes in the app or uninstall QNote; everything stored locally is removed.</li>
-        <li><strong>Google Drive backup:</strong> in QNote open the menu (☰) → Backup → Sign out (without Premium, remove QNote's access in your Google Account → Security → Third-party connections). Then in Google Drive (web) open Settings → Manage apps → QNote → Options → "Delete hidden app data".</li>
+        <li><strong>Google Drive backup:</strong> in QNote open the menu (☰) → Backup → Sign out (or remove QNote's access in your Google Account → Security → Third-party connections). Then in Google Drive (web) open Settings → Manage apps → QNote → Options → "Delete hidden app data".</li>
         <li><strong>Subscription:</strong> cancelling it doesn't delete your notes. Purchase data is kept by Google Play (see Google Play Help).</li>
         <li><strong>Ad data:</strong> handled by Google (see <a href="#ads">Ads</a>); you can reset or delete the advertising ID in Android settings.</li>
         <li><strong>By email:</strong> if you need help, write to <a href="mailto:webbusinesstoolspro@gmail.com">webbusinesstoolspro@gmail.com</a>. The developer does not keep copies of your data on any server.</li>
